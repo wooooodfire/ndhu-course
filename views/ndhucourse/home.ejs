@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate')%>
+<main>
+	<div class="white-bg"></div>
+	<div class="main-content">
+		<h1>課表轉換器</h1>
+		<p>這項工具能輕鬆將您在NDHU的課表複製到Google日曆上</p>
+		<a href="https://wooooodfire.notion.site/ndhu-course-fbe448e9a2ad45ebbca86ef772e60045" class="btn info">使用教學</a>
+		
+		<form action="/ndhucourse" method="post" id="course">
+			<div class="course-col">
+				<p>學號</p>
+				<input type="text" name="studentID" id="studentID" class="input" placeholder="學號" required />
+			</div>
+			<div class="course-col">
+				<p>選課密碼</p>
+				<input type="password" name="password" id="password" class="input" placeholder="選課密碼" required />
+			</div>
+			<div class="course-col">
+				<p>日曆ID</p>
+				<input type="text" name="calendarID" id="calendarID" class="input" placeholder="日曆ID (optional)" />
+			</div>
+			<div class="course-col">
+				<p>開學日</p>
+				<input type="date" name="dateStart" id="dateStart" class="input" value="2022-09-12" required/>
+			</div>
+			<div class="course-col">
+				<p>寒暑假開始</p>
+				<input type="date" name="dateEnd" id="dateEnd" class="input" value="2023-01-16" required/>
+			</div>
+			<button class="btn success" id="get-info-btn">取得資訊</button>
+			<div class="flash-content">
+				<p><%= messages %></p>
+			</div>
+	
+		</form>
+	</div>
+</main>
+<script type="text/javascript">
+	document.getElementById('get-info-btn').addEventListener('click', ()=>{
+    document.getElementById('get-info-btn').innerText = '請稍等...'
+})
+</script>

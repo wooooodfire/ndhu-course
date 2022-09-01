@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, input, textarea, button {
+	/* font-family: 'Lato', sans-serif; */
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #000000;
+}
+a{
+	text-align: center;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	background-image: linear-gradient(to left bottom, #b6dfae, #55c57a);
+}
+
+.white-bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '';
+	height: 100%;
+	width: 70%;
+	z-index: 0;
+	background-color: white;
+	box-shadow: 0px 0px 10px #0000003a;
+}
+
+.main-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50vw;
+}
+.flash-content {
+	/* content: ''; */
+	height: 3rem;
+}
+
+.show-course {
+	height: 60vh;
+	width: 50vw;
+	padding: 2rem;
+	overflow-y: auto;
+	border-radius: 4px;
+	background-color: rgba(159, 227, 120, 0.368);
+}
+.show-course h2 {
+	color: #d15f5f;
+	margin-bottom: .5rem;
+}
+.show-course ul {
+	padding-left: 1.5rem;
+}
+.show-course ul:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.input,
+.btn{
+	width: 100%;
+	padding: 0.8rem;
+	border: 0.1rem solid rgb(170, 170, 170);
+	border-radius: 4px;
+	margin: 0.4rem 0;
+	opacity: 0.85;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	text-decoration: none; /* remove underline from anchors */
+	background-color: transparent;
+}
+
+.course-col{
+	display: flex;
+	align-items: center;
+}
+.course-col p{
+	flex: 2;
+}
+.course-col input{
+	flex: 8;
+}
+
+/* Green */
+.success {
+	border-color: #04aa6d;
+	color: green;
+}
+
+.success:hover {
+	background-color: #04aa6d;
+	color: white;
+}
+
+
+.info {
+	border-color: #2196f3;
+	color: #2196f3;
+}
+
+.info:hover {
+	background: #2196f3;
+	color: white;
+}
+
+#course {
+	position: relative;
+}
+
+
+@media (max-width:580px) {
+	.white-bg{
+		width: 90%;
+	}
+	.main-content, .show-course{
+		width: 80vw;
+	}
+	.course-col p{
+		flex: 3;
+	}
+	.course-col input{
+		flex: 7;
+	}
+}
