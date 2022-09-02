@@ -7,6 +7,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const flash = require("connect-flash");
 const helmet = require("helmet");
+const favicon = require('serve-favicon');
 
 const ndhucourseRoutes = require('./routes/ndhucourse');
 
@@ -17,6 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // helmet
 const fontSrc = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
@@ -77,6 +79,10 @@ app.use(function (req, res, next) {
 app.get('/', (req, res)=>{
 	res.render('home', {title:'woodfire'});
 });
+
+app.get('/privacypolicy', (req, res, next)=>{
+	res.render('privacypolicy', {title:'Privacy Policy'})
+})
 
 app.use('/ndhucourse', ndhucourseRoutes);
 

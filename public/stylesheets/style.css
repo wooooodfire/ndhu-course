@@ -4,52 +4,66 @@
 	box-sizing: border-box;
 }
 
-body, input, textarea, button {
-	/* font-family: 'Lato', sans-serif; */
-	font-family: 'Noto Sans TC', sans-serif;
+body,
+input,
+textarea,
+button {
+	font-family: "Noto Sans TC", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.7;
 	color: #000000;
 }
-a{
-	text-align: center;
-}
 
-main {
-	position: relative;
-	height: 100vh;
+body{
 	background-image: linear-gradient(to left bottom, #b6dfae, #55c57a);
 }
 
-.white-bg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	content: '';
-	height: 100%;
-	width: 70%;
-	z-index: 0;
-	background-color: white;
-	box-shadow: 0px 0px 10px #0000003a;
+h1,
+h2,
+h3 {
+	margin: 1rem 0;
+}
+
+ul {
+	list-style-type: circle;
+	list-style-position: outside;
+}
+
+li {
+	margin-left: 1.5rem;
+}
+
+p {
+	margin: 1rem 0;
+	line-height: 1.5rem;
+}
+
+a {
+	color: #2196f3;
+	word-break: break-all;
+}
+
+a.btn {
+	text-align: center;
 }
 
 .main-content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 50vw;
+	margin: auto;
+	width: 80%;
+	padding: 2rem 5rem;
+	background-color: white;
+	box-shadow: 0px 0px 10px #0000003a;
+	min-height: 100vh
 }
+
 .flash-content {
-	/* content: ''; */
 	height: 3rem;
 }
 
 .show-course {
 	height: 60vh;
-	width: 50vw;
+	width: 100%;
 	padding: 2rem;
 	overflow-y: auto;
 	border-radius: 4px;
@@ -57,7 +71,7 @@ main {
 }
 .show-course h2 {
 	color: #d15f5f;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 .show-course ul {
 	padding-left: 1.5rem;
@@ -67,7 +81,7 @@ main {
 }
 
 .input,
-.btn{
+.btn {
 	width: 100%;
 	padding: 0.8rem;
 	border: 0.1rem solid rgb(170, 170, 170);
@@ -81,18 +95,17 @@ main {
 	background-color: transparent;
 }
 
-.course-col{
+.course-col {
 	display: flex;
 	align-items: center;
 }
-.course-col p{
+.course-col p {
 	flex: 2;
 }
-.course-col input{
+.course-col input {
 	flex: 8;
 }
 
-/* Green */
 .success {
 	border-color: #04aa6d;
 	color: green;
@@ -102,7 +115,6 @@ main {
 	background-color: #04aa6d;
 	color: white;
 }
-
 
 .info {
 	border-color: #2196f3;
@@ -114,22 +126,18 @@ main {
 	color: white;
 }
 
-#course {
-	position: relative;
-}
-
-
-@media (max-width:580px) {
-	.white-bg{
+@media (max-width: 870px) {
+	.main-content {
 		width: 90%;
+		padding: 2rem 1rem;
 	}
-	.main-content, .show-course{
+	.show-course {
 		width: 80vw;
 	}
-	.course-col p{
+	.course-col p {
 		flex: 3;
 	}
-	.course-col input{
+	.course-col input {
 		flex: 7;
 	}
 }
