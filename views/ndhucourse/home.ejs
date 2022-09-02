@@ -35,7 +35,14 @@
 	</div>
 </main>
 <script type="text/javascript">
+	const studentID = document.getElementById('studentID');
+	const password = document.getElementById('password');
+	const dateStart = document.getElementById('dateStart');
+	const dateEnd = document.getElementById('dateEnd');
+	
 	document.getElementById('get-info-btn').addEventListener('click', ()=>{
-    document.getElementById('get-info-btn').innerText = '請稍等...'
-})
+		if(studentID.value && password.value && dateStart.value && dateEnd.value){
+			document.getElementById('get-info-btn').innerText = '請稍等...';
+		}
+	})
 </script>
