@@ -6,17 +6,16 @@
 
 
 ## 本地端使用
----
 首先請確認電腦已安裝好Node.js、Redis。
 
 ```bash
 $ git clone https://github.com/wooooodfire/ndhu-course.git
-$ cd ndhu-course/
+$ cd ndhu-course
 $ npm install
 ```
 
 安裝爬蟲需要的Chromium。
-```
+```bash
 $ node node_modules/puppeteer/install.js
 ```
 
