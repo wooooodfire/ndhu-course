@@ -8,7 +8,8 @@ const ejsMate = require("ejs-mate");
 const flash = require("connect-flash");
 const helmet = require("helmet");
 const favicon = require('serve-favicon');
-
+const {google} = require('googleapis');
+ 
 const ndhucourseRoutes = require('./routes/ndhucourse');
 
 app.engine("ejs", ejsMate);
@@ -19,6 +20,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
+
+google.options({
+	http2: true,
+});
 
 // helmet
 const fontSrc = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
